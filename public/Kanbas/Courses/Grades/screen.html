@@ -1,132 +1,282 @@
-<table width="100%">
-    <tr>
-        <td valign="top">
-            <ul>
-                <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-                <li><a href="/Kanbas/Dashboard/screen.html">DashBoard</a></li>
-                <li><a href="/Kanbas/Courses/Home/screen.html">Course</a></li>
-                <li><a href="/Kanbas/Calendar/Profile/screen.html">Calendar</a></li>
-                <li><a href="/Kanbas/Inbox/screen.html">Inbox</a></li>
-                <li><a href="/Kanbas/History/screen.html">History</a></li>
-                <li><a href="/Kanbas/Studio/Profile/screen.html">Studio</a></li>
-                <li><a href="/Kanbas/Commons/screen.html">Commons</a></li>
-                <li><a href="/Kanbas/Help/screen.html">Help</a></li>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Kanbas/KanbasNavigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Assignments/index.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Grades/index.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Kanbas/Courses/CourseNavigation/index.css" />
+</head>
+
+<body>
+    <div class="wd-flex-row-container">
+        <div class="wd-bg-color-black" id="kanbas-navigation" style="background-color: black;">
+            <ul class="wd-kanbas-navigation">
+                <li><a href="/Kanbas/Dashboard/screen.html">
+                        <div><i class="fa-brands fa-neos"></i></div>
+                    </a>
+                </li>
+                <li><a href="/Kanbas/Account/Profile/screen.html">
+                        <div class="wd-profile"><i class="fa-solid fa-user"></i></div>
+                        Account
+                    </a></li>
+                <li><a href="/Kanbas/Dashboard/screen.html">
+                        <div><i class="fa-solid fa-gauge-high"></i></div>
+                        DashBoard
+                    </a>
+                </li>
+                <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html">
+                        <div><i class="fa-solid fa-book"></i></div>
+                        Courses
+                    </a>
+                </li>
+                <li><a href="/Kanbas/Calendar/Profile/screen.html">
+                        <div><i class="fa-solid fa-calendar-days"></i></div>
+                        Calendar
+                    </a></li>
+                <li><a href="/Kanbas/Inbox/screen.html">
+                        <div><i class="fa-solid fa-inbox"></i></div>
+                        Inbox
+                    </a></li>
+                <li><a href="/Kanbas/History/screen.html">
+                        <div><i class="fa-regular fa-clock"></i></div>
+                        History
+                    </a></li>
+                <li><a href="/Kanbas/Studio/Profile/screen.html">
+                        <div><i class="fa-solid fa-building-columns"></i></div>
+                        Studio
+                    </a></li>
+                <li><a href="/Kanbas/Commons/screen.html">
+                        <div><i class="fa-regular fa-comment"></i></div>
+                        Commons
+                    </a></li>
+                <li><a href="/Kanbas/Help/screen.html">
+                        <div><i class="fa-solid fa-question"></i></i></div>
+                        Help
+                    </a></li>
             </ul>
-            
-        </td>
-        <td valign="top">
-            <ul>
-                <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
-                <li><a href="/Kanbas/Courses/Modules/screen.html">Modules</a></li>
-                <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
-                <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
-                <li><a href="/Kanbas/Courses/Piazza/screen.html">Piazza</a></li>
-                <li><a href="/Kanbas/Courses/Quizzes/screen.html">Quizzes</a></li>
-                <li><a href="/Kanbas/Courses/Syllabus/screen.html">Syllabus</a></li>
-                <li><a href="/Kanbas/Courses/Zoom Meeting/screen.html">Zoom Meeting</a></li>
-                <li><a href="/Kanbas/Courses/People/screen.html">People</a></li>
-                <li><a href="/Kanbas/Courses/Setting/CourseDetails/screen.html">Setting</a></li>
-            </ul>
-        </td>
-        <td valign="top">
-            <select>
-                <option>Gradebook</option>
-                <option>Gradebook 2</option>
-                <option>Gradebook 3</option>
-            </select>
-            <button>Import</button>
-            <select>
-                <option>Export</option>
-                <option>UnPublish</option>
-            </select>
-            <button>Configure</button>
-            
-            <table width="100%">
-                <tbody>
-                    <tr>
-                        <td>
-                            Student name:<br />
-                            <input title="Type the name of the student" placeholder="Search Students" />
-                        </td>
-                        <td>
-                            Assignment Names:<br />
-                            <input placeholder="Search Assignment" />
-                        </td>
-                        <td>
-                            <button>Apply</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            
-            <table width="100%" border="1">
-                <thead>
-                    <tr>
-                        <th>Student name</th>
-                        <th>A1 SETUP OUT of 100</th>
-                        <th>A2 HTML OUT of 100</th>
-                        <th>A3 CSS OUT of 100</th>
-                        <th>A4 BOOTSTRAP OUT of 100</th>
-                        <th>A5 JAVASCRIPT OUT of 100</th>
-                        <th>A6 REACT OUT of 100</th>  
-                        <th>A7 REDUX OUT of 100</th>
-                        <th>A8 NODE OUT of 100</th>
-                        <th>A9 MONGO OUT of 100</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>Alice Zhang</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                    </tr>
-                    <tr>
-                        <th>Alex Zheng</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                    </tr>        
-                    <tr>
-                        <th>Aeron Li</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                    </tr>
-                    <tr>
-                        <th>Axon Hao</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                        <th>100%</th>
-                    </tr>
-                </tbody>
-                <tfoot></tfoot>
-            </table>
-            
-        </td>
-    </tr>
-</table>
+        </div>
+        <div class="wd-col-container">
+            <div class="wd-flex-grow-1" id="kanbas-title">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><i class="fa-solid fa-list wd-kanbas-title"></i>CS5610.17367.202410
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page" style="margin-top: 5px;">Grades</li>
+                    </ol>
+                </nav>
+                <hr>
+            </div>
+
+
+            <div class="wd-flex-container">
+                <div id="course-navigation">
+                    <ul class="wd-course-navigation">
+                        <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+                        <li><a href="/Kanbas/Courses/Modules/screen.html">Modules</a></li>
+                        <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
+                        <li class="wd-active"><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                        <li><a href="/Kanbas/Courses/Piazza/screen.html">Piazza</a></li>
+                        <li><a href="/Kanbas/Courses/Quizzes/screen.html">Quizzes</a></li>
+                        <li><a href="/Kanbas/Courses/Syllabus/screen.html">Syllabus</a></li>
+                        <li><a href="/Kanbas/Courses/Zoom Meeting/screen.html">Zoom Meeting</a></li>
+                        <li><a href="/Kanbas/Courses/People/screen.html">People</a></li>
+                        <li><a href="/Kanbas/Courses/Setting/CourseDetails/screen.html">Setting</a></li>
+                    </ul>
+                </div>
+                <div class="wd-flex-grow-1" id="course-module">
+                    <div class="module-buttons">
+                            <div class="float-end">
+                                <button type="button" class="btn btn-light rounded-0 kanbas-button">
+                                    <i class="fa-solid fa-file-import"></i> Import</button>
+                                <button type="button" class="btn btn-light rounded-0 kanbas-button">
+                                    <i class="fa-solid fa-file-import"></i> Export <i class="fa-solid fa-angle-down"></i></button>
+                                <button type="button" class="btn btn-light text-dark rounded-0 kanbas-button2">
+                                    <i class="fa-solid fa-gear"></i></button>
+                            </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="exampleFormControlInput1" class="form-label" style="font-weight: bold;">Student Names</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" 
+                            placeholder="Search Studetns">
+                        </div>
+        
+                        <div class="col-6">
+                            <label for="exampleFormControlInput1" class="form-label" style="font-weight: bold;">Assignments Name</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" 
+                            placeholder="Search Assignments">
+                        </div>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-light text-dark rounded-0 kanbas-button2" >
+                            <i class="fa-solid fa-filter"></i>Apply Filters</button>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered">
+                            
+                            <tbody>
+                                <tr>
+                                    <td>Student name</td>
+                                    <td>A1 SETUP <br> out of 100</td> 
+                                    <td>A2 HTML <br> out of 100</td>
+                                    <td>A3 CSS <br> out of 100</td>
+                                    <td>A4 BOOTSTRAP <br> out of 100</td>
+                                    <td>A5 JAVASCRIPT <br> out of 100</td>
+                                    <td>A6 REACT <br> out of 100</td>
+                                    <td>A7 REDUX <br> out of 100</td>
+                                    <td>A8 NODE <br> out of 100</td>
+                                    <td>A9 MONGO <br> out of 100</td>
+                                </tr>
+
+
+                                <tr>
+                                    <td><a href="#">Adam Smith</a></td>
+                                    <td>90%</td>
+                                    <td>92%</td>
+                                    <td>88%</td>
+                                    <td>86%</td>
+                                    <td>95%</td>
+                                    <td>93%</td>
+                                    <td>81%</td>
+                                    <td>87%</td>
+                                    <td>94%</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Alice Brown</a></td>
+                                    <td>89%</td>
+                                    <td>90%</td>
+                                    <td>82%</td>
+                                    <td>85%</td>
+                                    <td>96%</td>
+                                    <td>87%</td>
+                                    <td>84%</td>
+                                    <td>91%</td>
+                                    <td>93%</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Andrew White</a></td>
+                                    <td>88%</td>
+                                    <td>85%</td>
+                                    <td>84%</td>
+                                    <td>86%</td>
+                                    <td>89%</td>
+                                    <td>87%</td>
+                                    <td>90%</td>
+                                    <td>80%</td>
+                                    <td>92%</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Anna Black</a></td>
+                                    <td>87%</td>
+                                    <td>88%</td>
+                                    <td>85%</td>
+                                    <td>89%</td>
+                                    <td>92%</td>
+                                    <td>91%</td>
+                                    <td>84%</td>
+                                    <td>83%</td>
+                                    <td>91%</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Antony Gray</a></td>
+                                    <td>89%</td>
+                                    <td>87%</td>
+                                    <td>85%</td>
+                                    <td>81%</td>
+                                    <td>93%</td>
+                                    <td>84%</td>
+                                    <td>80%</td>
+                                    <td>91%</td>
+                                    <td>90%</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">April Green</a></td>
+                                    <td>85%</td>
+                                    <td>86%</td>
+                                    <td>88%</td>
+                                    <td>84%</td>
+                                    <td>95%</td>
+                                    <td>90%</td>
+                                    <td>89%</td>
+                                    <td>83%</td>
+                                    <td>91%</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Arthur Blue</a></td>
+                                    <td>92%</td>
+                                    <td>91%</td>
+                                    <td>85%</td>
+                                    <td>88%</td>
+                                    <td>83%</td>
+                                    <td>85%</td>
+                                    <td>80%</td>
+                                    <td>90%</td>
+                                    <td>92%</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Ava Indigo</a></td>
+                                    <td>91%</td>
+                                    <td>85%</td>
+                                    <td>89%</td>
+                                    <td>86%</td>
+                                    <td>95%</td>
+                                    <td>92%</td>
+                                    <td>89%</td>
+                                    <td>85%</td>
+                                    <td>88%</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Aaron Orange</a></td>
+                                    <td>93%</td>
+                                    <td>84%</td>
+                                    <td>89%</td>
+                                    <td>80%</td>
+                                    <td>95%</td>
+                                    <td>90%</td>
+                                    <td>85%</td>
+                                    <td>91%</td>
+                                    <td>90%</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Alyssa Purple</a></td>
+                                    <td>90%</td>
+                                    <td>87%</td>
+                                    <td>85%</td>
+                                    <td>83%</td>
+                                    <td>95%</td>
+                                    <td>89%</td>
+                                    <td>91%</td>
+                                    <td>82%</td>
+                                    <td>93%</td>
+                                </tr>
+                                
+                    
+
+                            </tbody>
+                            <tfoot></tfoot>
+                        </table>
+                    </div>
+                    
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+</body>

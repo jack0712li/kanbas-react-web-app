@@ -1,0 +1,64 @@
+
+
+.wd-profileeditor-title{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.wd-profileeditor-title i{
+    color: red;
+    padding-right: 5px;
+    margin-left: 20px;
+}
+
+
+.wd-profileeditor-icon{
+    padding-top: 20px;
+}
+
+.wd-profileeditor-icon i{
+    color: grey;
+    font-size: 70px;
+}
+
+.wd-profileeditor-name{
+    font-size: 30px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+
+.wd-profileeditor-content{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.wd-profileeditor-content h2{
+    padding-bottom: 10px;
+}
+
+
+.wd-profileeditor-content a{
+    text-decoration: none;
+    color: red;
+}
+
+.wd-profileeditor-button{
+    color: black !important;
+    padding: 3px;
+    white-space: nowrap;
+}
+
+.wd-profileeditor-title-input{
+    padding-bottom: 20px;
+}
+
+.wd-profileeditor-title-input label{
+    font-weight: bold;
+    display: block;
+    padding-top: 5px;
+}
+
+.wd-profileeditor-done-button{
+    width: 50%;
+    margin: auto;
+}

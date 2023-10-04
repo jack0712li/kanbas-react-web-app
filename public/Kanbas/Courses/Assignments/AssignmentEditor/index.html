@@ -1,100 +1,165 @@
-<select>
-    <option>SpeedGrader</option>
-</select>
-<hr>
 
-<label for="assignmnetName"><h2>Assignment Name</h2></label>
-<input value="Assignment 1 - html" id="assignmnetName" placeholder="Assignment Nmae" />
-<br />
-<br />
+<link rel="stylesheet"  href="/Kanbas/Courses/Assignments/AssignmentEditor/index.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/>
 
-<textarea cols="50" rows="5">This is the first assignment to build kanbas</textarea>
-<br />
-<br />
+<div class="assignment-editor-content">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Assignment Name</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="A1- ENV + HTML">
+    </div>
+    <div class="mb-3">
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" >This is the first assignment to build kanbas</textarea>
+    </div>
+    
+    <div class="container">
+        <div class="mb-3 row">
+            <div class="col-3 text-end">
+                <label for="inputPassword" class="col-form-label" >Points</label>
+            </div>
+            <div class="col-5">
+                <input type="password" class="form-control" id="inputPassword" placeholder="100">
+            </div>      
+        </div>
+        
+        <div class="mb-3 row">
+            <div class="col-3 text-end">
+                <label for="assignmentGroup1" class="col-form-label">Assignment Group</label>
+            </div>
+            <div class="col-5">
+                <select class="form-select" aria-label="Default select example" id="assignmentGroup1">
+                    <option selected>ASSIGNMENTS</option>
+                    <option value="2">QUIZZES</option>
+                    <option value="3">EXAMS</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="mb-3 row">
+            <div class="col-3 text-end">
+                <label for="assignmentGroup2" class="col-form-label">Display Grade as</label>
+            </div>
+            <div class="col-5">
+                <select class="form-select" aria-label="Default select example" id="assignmentGroup2">
+                    <option selected>Percentage</option>
+                    <option value="2">GPA</option>
+                </select>
+            </div>
+        </div>
 
-<label for="points">Points</label> <br />
-<input id="points" value="100" type="number" max="100" min="0" step="5"/>
-<br />
-<br />
+        <div class="mb-3 row mb-5">
+            <div class="col-3">
+            </div>
+            <div class="col-5">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Do not count this Assignment toward the final grade                    </label>
+                </div>
+            </div>
+        </div>
 
-<label for="assignmentGroup">Assignment Group</label> <br />
-<select id="assignmentGroup">
-    <option>ASSIGNMENTS</option>
-    <option>QUIZZES</option>
-    <option>EXAMS</option>
-</select>
-<br />
-<br />
 
-<label for="gradeDisplay">Display Grade as</label> <br />
-<select id="gradeDisplay">
-    <option>Percentage</option>
-    <option>GPA</option>
-</select>
-<br />
-<br />
+        <div class="mb-3 row">
+            <div class="col-3 text-end">
+                Submission Type
+            </div>
+            <div class="col-5">
 
-<label for="SubmissionType">Submission Type</label> <br />
-<select id="SubmissionType">
-    <option>Online</option>
-</select>
-<br />
-<br />
+                <div class="submission">
+                    <select class="form-select" aria-label="Default select example" style="width: 50%;">
+                        <option selected>Online</option>
+                        <option value="2">Hybrid</option>
+                    </select>
 
-<label >Online Entry Options</label> <br />
-<input type="checkbox" id="textEntry"/> <label for="textEntry">Text Entry</label> <br />
-<input type="checkbox" id="websiteUrl"/> <label for="websiteUrl">Webiste Url</label> <br />
-<label><input type="checkbox"/> Media Recordings</label> <br />
-<label><input type="checkbox" /> File Uploads</label> <br />
-<br />
-<br />
+                    <div class="entry">
+                        Online Entry Options
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Text Entry
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Webiste Url
+                        </label>
+                    </div>
 
-<label for="SubmissionAttemts">Submission Attemts</label> <br />
-<select id="SubmissionAttemts">
-    <option>Unlimited</option>
-    <option>One</option>
-    <option>Two</option>
-</select>
-<br />
-<br />
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Media Recordings
+                        </label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Student Anntation
+                        </label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            File Uploads
+                        </label>
+                    </div>
+                </div>
 
-<label for="SubmissionReveiw">Submission Reveiw</label> <br />
-<select id="SubmissionReveiw">
-    <option>None</option>
-    <option>At Least One</option>
-</select>
-<br />
-<br />
 
-<label >Gropu Assignment</label> <br />
-<input type="checkbox" id="groupassignment"/> <label for="groupassignment">This is a group assignment</label> <br />
-<br />
-<br />
+            </div>
+        </div>
 
-<label >Peer Reviews</label> <br />
-<input type="checkbox" id="PeerReviews"/> <label for="PeerReviews">Require Peer Reveiw</label> <br />
-<br />
-<br />
+        <div class="mb-3 row">
+            <div class="col-3 text-end">
+                Assign
+            </div>
+            <div class="col-5">
+                <div class="assign">
+                    <div class="assign-entry">
+                        Assign to
+                    </div>
+                    <div class="tag-holder">
+                        <button class="btn btn-light button">
+                             Everyone<i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div class="assign-entry">
+                        Due
+                    </div>
 
-<label for="Assignto">Assign<br />Assign to</label> <br />
-<input id="Assignto" value="Everyone" type="text" />
-<br />
-<br />
+                    <input type="password" class="form-control" id="inputPassword" 
+                    placeholder="Sep 18, 2023,11:59 PM" style="width: 90%; margin-left:20px;">
 
-<label for="due">Due</label> <br />
-<input id="due" type="date" value="2023-09-16" min="2023-09-01" />
-<br />
-<br />
+                    <div class="row" style="margin-left: 20px; width: 90%;">
+                        <div class="col-6">
+                            <div class="assign-entry2">
+                                Available from
+                            </div>
+                            <input type="text" class="form-control" placeholder="Sep 6, 2023,11:59 PM">
+                        </div>
+        
+                        <div class="col-6">
+                            <div class="assign-entry2">
+                                Untill
+                            </div>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
 
-<label for="Aviable">Aviable from</label> <br />
-<input id="Aviable" type="date" value="2023-09-11" min="2023-09-01" />
-<br />
-<br />
+                </div>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">
+                    <i class="fa-solid fa-plus"></i> Add </a>
 
-<label for="Until">Until</label> <br />
-<input id="Until" type="date" value="2023-09-20" min="2023-09-01" />
-<br />
-<br />
+            </div>
+        </div>
+    </div>
+    
+    
 
-<a href="/Kanbas/Courses/Assignments/screen.html"><button>Cancel</button></a>
-<a href="/Kanbas/Courses/Assignments/screen.html"><button>Save</button></a>
+</div>
+
