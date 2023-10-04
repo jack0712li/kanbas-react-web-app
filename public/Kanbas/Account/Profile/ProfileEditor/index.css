@@ -18,7 +18,7 @@
 
 .wd-profileeditor-icon i{
     color: grey;
-    font-size: 70px;
+    font-size: 150px;
 }
 
 .wd-profileeditor-name{
@@ -46,6 +46,7 @@
     color: black !important;
     padding: 3px;
     white-space: nowrap;
+    margin-right: 10px;
 }
 
 .wd-profileeditor-title-input{

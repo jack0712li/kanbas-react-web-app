@@ -17,7 +17,7 @@
 
 .wd-profile-icon i{
     color: grey;
-    font-size: 70px;
+    font-size: 150px;
 }
 
 .wd-profile-name{
@@ -45,4 +45,5 @@
     color: black !important;
     padding: 3px;
     white-space: nowrap;
+    margin-right: 10px;
 }

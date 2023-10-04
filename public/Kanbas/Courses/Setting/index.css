@@ -51,3 +51,27 @@
 .list-group-item, .custom-item {
     border-left: 0.666667px solid rgb(222, 226, 230) !important;
 }
+
+.image-upload-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.choose-image-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* This will hide the default input file */
+.d-none {
+    display: none;
+}
