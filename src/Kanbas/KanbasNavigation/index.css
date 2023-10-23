@@ -1,0 +1,69 @@
+
+.wd-kanbas-navigation .wd-icon {
+    font-size: 2em;
+  }
+  
+  .wd-kanbas-navigation .list-group-item:first-child,
+  .wd-kanbas-navigation .list-group-item:last-child,
+  .wd-kanbas-navigation .list-group-item.active:last-child,
+  .wd-kanbas-navigation.list-group {
+    border-radius: 0px;
+  }
+.wd-kanbas-navigation {
+    background-color: black;
+    width: 80px;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.wd-kanbas-navigation a {
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-size: 12px;
+    padding: 10px;
+    padding-bottom: 10px;
+    border: none;
+    width: 85px;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+  }
+
+.wd-kanbas-navigation .list-group-item{
+    padding: 10px;
+    font-size: 0.8em;
+    text-align: center;
+}
+.wd-kanbas-navigation .wd-icon{
+    color: red;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.wd-kanbas-navigation .wd-account-icon{
+    color: white;
+}
+
+.wd-kanbas-navigation a.active{
+    background-color: white;
+    color: red;
+}
+
+.wd-kanbas-navigation a.active .wd-account-icon {
+    color: grey;
+}
+
+.wd-kanbas-navigation .logo-container {
+    border: none;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 80px;
+  }
+.logo {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}

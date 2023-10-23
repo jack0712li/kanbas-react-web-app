@@ -1,0 +1,13 @@
+.wd-flex-grow-1 {
+    flex-grow: 1;
+}
+
+.breadcrumb {
+    --bs-breadcrumb-divider: '>';
+}
+
+
+.breadcrumb-link {
+    text-decoration: none;
+    color: red;
+}

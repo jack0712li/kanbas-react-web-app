@@ -1,0 +1,52 @@
+.status-container {
+    margin-left: 10px;
+  }
+  
+  .wd-flex-row-container, 
+  .wd-flex-col-container.kanbas-Status-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .status-btn {
+    width: 48%; 
+    margin-bottom: 5px;
+  }
+  
+  .status-btn {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  
+  .coming-up {
+    margin-top: 20px;
+  }
+  
+  .coming-up-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+  }
+  
+  .coming-up-list li {
+    margin-bottom: 10px;
+  }
+  
+  .red-text {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+.coming-up-list li a, 
+.red-text {
+  color: red;
+  text-decoration: none;
+}

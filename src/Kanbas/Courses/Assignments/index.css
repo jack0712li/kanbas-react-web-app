@@ -1,0 +1,14 @@
+.assignment-content a {
+    font-weight: bold;      
+    color: black;           
+    text-decoration: none;  
+}
+
+.assignment-content a:hover {
+    text-decoration: underline;  
+}
+.header-content {
+    display: flex;           
+    justify-content: space-between; 
+    align-items: center;       
+  }
