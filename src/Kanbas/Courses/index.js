@@ -1,4 +1,3 @@
-import db from "../../Kanbas/Database";
 import { Navigate, Route, Routes, useParams, useLocation} from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import "./index.css";
@@ -10,10 +9,10 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 
 
-function Courses() {
+function Courses({ courses }) {
   const { courseId } = useParams();
   const location = useLocation();
-  const course = db.courses.find((course) => course._id === courseId);
+  const course = courses.find((course) => course._id === courseId);
 
   const currentBreadcrumb = location.pathname.split('/').pop();
 

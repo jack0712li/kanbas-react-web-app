@@ -1,76 +1,68 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import db from "../../Database";
-import "./index.css";
-
-
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addModule,
+  deleteModule,
+  updateModule,
+  setModule,
+} from "./modulesReducer";
 
 function ModuleList() {
-    const { courseId } = useParams();
-    const modules = db.modules;
+  const { courseId } = useParams();
+  const modules = useSelector((state) => state.modulesReducer.modules);
+  const module = useSelector((state) => state.modulesReducer.module);
+  const dispatch = useDispatch();
 
-    return (
+  return (
+    <div className="list-group mt-0 col-lg-12 col-md-6 col-sm-12">
+        <div className="module-buttons">
+          <input value={module.name} className="form-control" onChange={(e) => dispatch(setModule({ ...module, name: e.target.value }))} />
+          <textarea value={module.description} className="form-control" onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))}></textarea>
+          <div className="float-end mt-2">
+              <button onClick={() => dispatch(addModule({ ...module, course: courseId }))} className="btn btn-success">Add</button>
+              <button onClick={() => dispatch(updateModule(module))} className="btn btn-danger ">Update</button>
+          </div>
+        </div>
+        <hr />
 
-        <div className="list-group mt-0 col-lg-12 col-md-6 col-sm-12">
-            <div className="module-buttons">
-                <div className="float-end">
-                    <button type="button" className="btn btn-light text-dark rounded-0 kanbas-button">Collapse All</button>
-                    <button type="button" className="btn btn-light text-dark rounded-0 kanbas-button">View Progress</button>
-
-                    <div className="dropdown d-inline-block">
-                        <button className="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                             Publish All
-                        </button>
-                        <ul className="dropdown-menu">
-                            <li><a className="dropdown-item" href="#">Unpublish</a></li>
-                        </ul>
+        
+        {modules
+            .filter((module) => module.course === courseId)
+            .map((module, index) => (
+                <div key={index} className="list-group mt-3 mb-3 col-12">
+                    <div className="list-group-item list-group-item-secondary">
+                        {module.name}
+                        <button className="btn btn-danger float-end" onClick={() => dispatch(deleteModule(module._id))}>Delete</button>
+                        <button className="btn btn-success float-end me-2" onClick={() => dispatch(setModule(module))}>Edit</button>
                     </div>
-
-                    <button type="button" className="btn btn-danger rounded-0 kanbas-button"> Module</button>
-                    <button type="button" className="btn btn-light text-dark rounded-0 kanbas-button2"></button>
-                </div>
-                <div className="clearfix"></div>
-            </div>
-            <hr />
-            {modules
-                .filter((module) => module.course === courseId)
-                .map((module, moduleIndex) => (
-                    <div key={moduleIndex} className="list-group mt-3 mb-3 col-12">
-                        <div className="list-group-item list-group-item-secondary">
-                            {module.name}
-                            <span className="icon-right"></span>
+                    <div className="collapse show">
+                        <div className="list-group-item with-border" style={{ paddingLeft: '20px' }}>
+                            <div className="content-text">{module.description}</div>
                         </div>
-                        <div className="collapse show">
-                            <div className="list-group-item with-border" style={{ paddingLeft: '20px' }}>
-                                <div className="content-text">{module.description}</div>
-                                <span className="icon-right"></span>
-                            </div>
-                            {
-                                module.lessons && (
-                                    <div>
-                                        {module.lessons.map((lesson, lessonIndex) => (
-                                            <div key={lessonIndex}>
-                                                <div className="list-group-item list-group-item-secondary">
-                                                    {lesson.name}
-                                                    <span className="icon-right"></span>
-                                                </div>
-                                                <div className="collapse show">
-                                                    <div className="list-group-item with-border" style={{ paddingLeft: '40px' }}>
-                                                        <div className="content-text">{lesson.description}</div>
-                                                        <span className="icon-right"></span>
-                                                    </div>
+                        {
+                            module.lessons && (
+                                <div>
+                                    {module.lessons.map((lesson, index) => (
+                                        <div key={index}>
+                                            <div className="list-group-item list-group-item-secondary">
+                                                {lesson.name}
+                                            </div>
+                                            <div className="collapse show">
+                                                <div className="list-group-item with-border" style={{ paddingLeft: '40px' }}>
+                                                    <div className="content-text">{lesson.description}</div>
                                                 </div>
                                             </div>
-                                        ))}
-                                    </div>
-                                )
-                            }
-                        </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            )
+                        }
                     </div>
-                ))}
-        </div>
-    );
+                </div>
+            ))}
+    </div>
+);
 }
 
 export default ModuleList;
-

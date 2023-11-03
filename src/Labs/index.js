@@ -23,6 +23,12 @@ function Labs() {
           >
             Assignment 4
           </Link>
+          <Link
+            to="/Kanbas"
+            className={`nav-link ${pathname.includes("Kanbas") ? "active" : ""}`}
+          >
+            Kanbas
+          </Link>
         </div>
         <Routes>
           <Route path="/" element={<Navigate to="a3" />} />
