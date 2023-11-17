@@ -13,6 +13,8 @@ function WorkingWithArrays() {
     const [errorMessage, setErrorMessage] = useState(null);
 
     const [todos, setTodos] = useState([]);
+
+      
     const fetchTodos = async () => {
         const response = await axios.get(API);
         setTodos(response.data);
@@ -40,20 +42,13 @@ function WorkingWithArrays() {
         }
     };
 
-    const createTodo = async () => {
-        const response = await axios.get(`${API}/create`);
-        setTodos(response.data);
-    };
+
 
     const fetchTodoById = async (id) => {
         const response = await axios.get(`${API}/${id}`);
         setTodo(response.data);
     };
-    const updateTitle = async () => {
-        const response = await axios.get(
-            `${API}/${todo.id}/title/${todo.title}`);
-        setTodos(response.data);
-    };
+
     const postTodo = async () => {
         const response = await axios.post(API, todo);
         setTodos([...todos, response.data]);
@@ -69,6 +64,7 @@ function WorkingWithArrays() {
 
             <input className="form-control mb-2 w-100"
                 value={todo.id}
+                readOnly
                 onChange={(e) => setTodo({
                     ...todo,
                     id: e.target.value
@@ -78,13 +74,12 @@ function WorkingWithArrays() {
                     ...todo,
                     title: e.target.value
                 })} />
-            <button onClick={createTodo}
-                className="btn btn-primary mb-2 w-100">
-                Create Todo
+
+            <button className="btn btn-primary mb-2 w-100" onClick={postTodo} >
+                Post Todo
             </button>
-            <button onClick={updateTitle}
-                className="btn btn-success mb-2 w-100">
-                Update Title
+            <button className="btn btn-success mb-2 w-100" onClick={updateTodo}>
+                Update Todo
             </button>
             <textarea className="form-control"
                 onChange={(e) => setTodo({
@@ -108,12 +103,7 @@ function WorkingWithArrays() {
                 />
                 Completed
             </label>
-            <button className="btn btn-primary float-end" onClick={postTodo} >
-                Post Todo
-            </button>
-            <button className="btn btn-primary float-end" onClick={updateTodo}>
-                Update Todo
-            </button>
+
             {errorMessage && (
                 <div className="alert alert-danger mb-2 mt-2">
                     {errorMessage}
